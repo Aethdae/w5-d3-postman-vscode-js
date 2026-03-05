@@ -7,7 +7,7 @@ async function getPokeApi() {
     if (!res.ok) {
     }
     const data = await res.json();
-    //logged 151st pokemon, Mew + mew's second ability to show increased limit + parsing json data.
+    //logged 151st pokemon, Mew
     console.log(data.results[150].name);
     //pass to a different function
     getPokemonData(data.results[150].url);
