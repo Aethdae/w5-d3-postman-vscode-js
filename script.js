@@ -5,6 +5,7 @@ async function getPokeApi() {
     //limit increased to original 151
     const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
     if (!res.ok) {
+      return;
     }
     const data = await res.json();
     //logged 151st pokemon, Mew
@@ -20,6 +21,7 @@ async function getPokemonData(url) {
   try {
     const res = await fetch(url);
     if (!res.ok) {
+      return;
     }
     const data = await res.json();
     //log mew's 10th move
